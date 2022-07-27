@@ -28,7 +28,7 @@ pipeline {
                 sh 'docker push shashikamle/spc'
             }
         }
-        stage('K8s pull') {
+        stage('Deploy on k8s') {
             steps {
                 sh 'kubectl apply -f spring.yml'
             }
